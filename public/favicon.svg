@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" rx="16" fill="#0e0e0e"/>
+  
+  <!-- Stylized "B" with accent accent -->
+  <path d="M18 16C18 14.8954 18.8954 14 20 14H32C38.6274 14 44 19.3726 44 26C44 29.6493 42.1957 32.8526 39.3 34.7C42.8573 36.5732 45 40.2956 45 44.5C45 50.8513 39.8513 56 33.5 56H20C18.8954 56 18 55.1046 18 54V16Z" fill="#c8410c"/>
+  
+  <!-- Inner cutouts for the "B" shape -->
+  <path d="M28 22V34H32C35.3137 34 38 31.3137 38 28C38 24.6863 35.3137 22 32 22H28Z" fill="#0e0e0e"/>
+  <path d="M28 40V50H33.5C37.0899 50 40 47.0899 40 43.5C40 40.2 37.8 37.6 35 37.2V40H28Z" fill="#0e0e0e"/>
+</svg>

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "buildwithnafisa — Web Development & Automation",
   description:
     "Full-stack developer specialising in Next.js, React, and intelligent automation. Turning complex requirements into polished, production-ready products.",
+     icons: {
+    icon: '/favicon.svg',
+  },
   keywords: [
     "Next.js",
     "React",

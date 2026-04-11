@@ -1,0 +1,49 @@
+.bar {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.9rem 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.track {
+  display: flex;
+  gap: 0;
+  animation: marquee 60s linear infinite;
+  width: max-content;
+}
+
+.item {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.item::after {
+  content: '◆';
+  font-size: 0.4rem;
+  opacity: 0.4;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    font-size: 0.6rem;
+    padding: 0 1.5rem;
+  }
+}

@@ -1,0 +1,191 @@
+.about {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  padding: 2rem;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #000;
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.experience_section {
+  margin: 4rem 0;
+  padding: 3rem;
+  background: #000;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.experience_section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.experience_section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.experience_section a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  transition: text-decoration-color 0.3s ease;
+}
+
+.experience_section a:hover {
+  text-decoration-color: #fff;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.highlight {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.tech {
+  margin: 4rem 0;
+}
+
+.tech h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.tech_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.tech_grid span {
+  padding: 0.75rem 1rem;
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.tech_grid span:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .experience_section {
+    padding: 2rem;
+  }
+
+  .experience_section h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlights {
+    gap: 1rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .tech_grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .tech_grid span {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+}

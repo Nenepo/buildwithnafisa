@@ -1,0 +1,238 @@
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3rem 4rem 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 38ch;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(200, 65, 12, 0.3);
+}
+
+.btnGhost {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.btnGhost:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.statNum {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* Right / Grid */
+.right {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.cell {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  cursor: default;
+  transition: background 0.3s;
+}
+
+.cell:hover {
+  background: var(--accent-light);
+}
+
+.cellDark {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.cellDark:hover {
+  background: #1a1a1a;
+}
+
+.hotTag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1px;
+  letter-spacing: 0.06em;
+}
+
+.cellIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+.cellLabel {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cellSub {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  opacity: 0.6;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .right { display: none; }
+  .left { padding: 6rem 1.5rem 4rem; }
+}

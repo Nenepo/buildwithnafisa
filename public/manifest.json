@@ -1,0 +1,17 @@
+{
+  "name": "buildwithnafisa - Web Development & Automation",
+  "short_name": "buildwithnafisa",
+  "description": "Website developer specializing in Next.js, React, and intelligent automation with Make.com.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#0e0e0e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

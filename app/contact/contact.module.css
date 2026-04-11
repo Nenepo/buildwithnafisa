@@ -1,0 +1,196 @@
+.contact {
+  width: 100%;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.formSection {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #000;
+  background: #fff;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.submit {
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submit:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.submit:active {
+  transform: translateY(0);
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  border-color: #000;
+  background: #fff;
+}
+
+.infoCard h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.infoCard a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  transition: all 0.3s ease;
+}
+
+.infoCard a:hover {
+  border-bottom-color: transparent;
+}
+
+.infoCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoCard li {
+  padding: 0.4rem 0;
+  color: #666;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.infoCard li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .submit {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

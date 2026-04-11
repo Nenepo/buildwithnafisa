@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #0e0e0e;
+  --cream: #f5f2eb;
+  --warm-white: #faf9f6;
+  --accent: #c8410c;
+  --accent-light: #f0e4db;
+  --muted: #6b6560;
+  --border: rgba(14, 14, 14, 0.12);
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --mono: 'DM Mono', monospace;
+  --sans: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--warm-white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes barGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+.fade-in   { animation: fadeInUp 0.7s ease both; }
+.fade-in-2 { animation: fadeInUp 0.7s ease 0.15s both; }
+.fade-in-3 { animation: fadeInUp 0.7s ease 0.30s both; }
+.fade-in-4 { animation: fadeInUp 0.7s ease 0.45s both; }
+
+/* Accessibility: Focus visible styles */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Improved color contrast for muted text in important contexts */
+@media (prefers-contrast: more) {
+  body { --muted: #5a5450; }
+}

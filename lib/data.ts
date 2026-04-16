@@ -12,42 +12,43 @@ export const HERO = {
   eyebrow: "Available for projects",
   headline: ["I build the web", "that ", "works", " for you."], // index 2 is italic+accent
   description:
-    "Website Developer specialising in Next.js, React, and intelligent automation with Make.com — turning complex requirements into polished, production-ready products.", // Currently focusing on frontend mastery
+       "I’m a frontend developer working with Next.js and React, and I build clean, fast websites that don’t just look good, they actually do what they’re supposed to do. I also set up automations with Make.com to help businesses save time and stop doing things manually.",
+
   stats: [
-    { num: "30+", label: "Projects delivered" },
     { num: "100%", label: "On-time delivery" },
-    { num: "5★", label: "Client rating" },
+    { num: "5★", label: "Client feedback" },
   ],
   gridCells: [
     {
       icon: "⚡",
       label: "Next.js & React",
-      sub: "Performant web apps",
+      sub: "Fast, clean, scalable builds",
       dark: true,
       hot: false,
     },
     {
       icon: "🤖",
       label: "Automation",
-      sub: "Make.com workflows", // Currently using Make.com only
+      sub: "I remove repetitive work completely",
       dark: false,
       hot: true,
     },
     {
       icon: "🎨",
       label: "Website builders",
-      sub: "Whatever tool is needed to get the job done, trust that thats no problem",
+      sub: "Whatever gets the job done, I’ll use it",
       dark: false,
       hot: false,
     },
     {
       icon: "🔗",
       label: "API Integration",
-      sub: "Connect everything",
+      sub: "Everything connected, no stress",
       dark: true,
       hot: false,
     },
   ],
+
 };
 
 export const STACK_MARQUEE = [
@@ -74,7 +75,7 @@ export const SERVICES = [
     num: "01",
     icon: "⚡",
     name: "Web Development",
-    desc: "Fast, scalable web applications built with Next.js and React. From landing pages to complex frontends — production-grade, always.", // Currently focusing on frontend
+    desc: "I build fast, responsive websites with Next.js and React. Whether it’s a landing page or a full app, I focus on making it clean, scalable, and actually usable, not just something that looks nice.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind"],
     featured: true,
   },
@@ -82,15 +83,15 @@ export const SERVICES = [
     num: "02",
     icon: "🤖",
     name: "Workflow Automation",
-    desc: "Kill the manual work. I design and build automation systems that connect your tools, trigger actions, and free your team to focus on what matters.",
-    tags: ["Make.com", "Webhooks", "APIs"], // Currently using Make.com for automation
+    desc: "If you’re doing things manually, we can fix that. I design automations that connect your tools and handle repetitive tasks so you don’t have to keep doing the same thing every day.",
+    tags: ["Make.com", "Webhooks", "APIs"],
     featured: false,
   },
   {
     num: "03",
     icon: "🔗",
     name: "API & Integration",
-    desc: "Seamlessly connect your services, databases, and third-party tools. Clean APIs, reliable data pipelines, zero headaches.",
+    desc: "I connect your systems properly so everything works together. No messy setups, no confusion, just clean integrations that do exactly what you need.",
     tags: ["REST APIs", "Supabase", "Node.js", "PostgreSQL"],
     featured: false,
   },
@@ -165,26 +166,26 @@ export const PROCESS_STEPS = [
   {
     num: "01",
     icon: "🔍",
-    title: "Discover",
-    desc: "We start with a deep-dive into your goals, existing stack, and pain points. No templates — every solution is scoped to your exact needs.",
+    title: "Understand",
+    desc: "First, I need to really understand what you’re trying to do, not just what you said, but what you actually need. That way we don’t build the wrong thing.",
   },
   {
     num: "02",
     icon: "📐",
-    title: "Design",
-    desc: "Architecture first, then UI. I map out the technical plan, review it with you, and only write code once we're aligned.",
+    title: "Plan",
+    desc: "Before I touch code, I map everything out, structure, flow, edge cases. It saves time and avoids issues later.",
   },
   {
     num: "03",
     icon: "⚡",
     title: "Build",
-    desc: "Fast, iterative development with regular check-ins. You see progress weekly — no disappearing acts, no surprises at launch.",
+    desc: "I build in iterations and keep you updated, so you’re never guessing what’s going on. You’ll always see progress.",
   },
   {
     num: "04",
     icon: "🚀",
-    title: "Launch & Support",
-    desc: "Deployment, testing, and handover docs included. I don't disappear post-launch — I'm here to ensure everything runs smoothly.",
+    title: "Launch",
+    desc: "Once everything is solid, we ship. And I don’t disappear after, I make sure everything keeps running smoothly.",
   },
 ];
 

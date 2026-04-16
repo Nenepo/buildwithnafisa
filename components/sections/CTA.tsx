@@ -23,7 +23,7 @@ export default function CTA() {
 
         <a
           href="https://www.linkedin.com/in/nafisa-faruna/"
-          className={styles.btnSecondary}
+          className={styles.btnGhost}
           target="_blank"
           rel="noopener noreferrer nofollow"
           title="Visit Nafisat Faruna on LinkedIn (opens in new tab)"

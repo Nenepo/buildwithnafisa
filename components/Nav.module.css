@@ -100,7 +100,7 @@
   position: fixed;
   top: 60px;
   left: 0;
-  right: 0;
+  height: calc(100vh - 60px);
   right: 0;
   background: rgba(250, 249, 246, 0.98);
   backdrop-filter: blur(12px);
@@ -159,7 +159,7 @@
 
 .mobileCta a:hover {
   background: var(--accent);
-  color: var(--ink);
+  color: var(--cream);
 }
 
 @media (max-width: 768px) {

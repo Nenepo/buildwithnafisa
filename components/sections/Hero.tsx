@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { HERO } from '@/lib/data'
 import styles from './Hero.module.css'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -22,8 +22,8 @@ export default function Hero() {
         <p className={`${styles.desc} fade-in-3`}>{HERO.description}</p>
 
         <div className={`${styles.actions} fade-in-4`}>
-          <a href="#projects" className={styles.btnPrimary}>See my work</a>
-          <a href="#contact" className={styles.btnGhost}>Start a project</a>
+          <Link href="#projects" className={styles.btnPrimary}>See my work</Link>
+          <Link href="#contact" className={styles.btnGhost}>Start a project</Link>
         </div>
 
         <div className={`${styles.stats} fade-in-4`}>
@@ -53,11 +53,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className={styles.scrollIndicator}>
-        <div className={styles.scrollLine} />
-        <span>Scroll</span>
-      </div>
+   
     </section>
   )
 }

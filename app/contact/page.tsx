@@ -50,7 +50,7 @@ export default function ContactPage() {
               <h1>Let&apos;s Build Something Great</h1>
               <p className={styles.subtitle}>
                 Have a project in mind? Let me know what you&apos;re working on,
-                and I&apos;ll get back to you within 24 hours.
+                and I usually reply within a few hours.
               </p>
             </div>
 

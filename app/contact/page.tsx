@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/data";
 import styles from "./contact.module.css";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,7 +38,7 @@ export default function ContactPage() {
     if (!res.ok) throw new Error("Something went wrong");
 
     setSubmitted(true);
-    alert("Message sent successfully! I will get back to you in a few hours.");
+    toast.success("Message sent successfully! I will get back to you in a few hours.");
 
     setFormData({ name: "", email: "", subject: "", message: "" });
 

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { Toaster } from "react-hot-toast";
 
 
 export const viewport: Viewport = {
@@ -102,6 +103,7 @@ export default function RootLayout({
       <body>
         <Analytics/>
         <SpeedInsights/>
+        <Toaster/>
         <a href="#main" style={{ position: "absolute", left: "-9999px", zIndex: -1 }}>
           Skip to main content
         </a>

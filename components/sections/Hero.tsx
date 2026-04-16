@@ -23,7 +23,7 @@ export default function Hero() {
 
         <div className={`${styles.actions} fade-in-4`}>
           <Link href="#projects" className={styles.btnPrimary}>See my work</Link>
-          <Link href="#contact" className={styles.btnGhost}>Start a project</Link>
+          <Link href="/contact" className={styles.btnGhost}>Start a project</Link>
         </div>
 
         <div className={`${styles.stats} fade-in-4`}>

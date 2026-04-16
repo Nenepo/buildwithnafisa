@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -97,6 +100,8 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Analytics/>
+        <SpeedInsights/>
         <a href="#main" style={{ position: "absolute", left: "-9999px", zIndex: -1 }}>
           Skip to main content
         </a>

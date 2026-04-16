@@ -22,23 +22,30 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    // Create mailto link
-    const mailtoLink = `mailto:${SITE.email}?subject=${encodeURIComponent(
-      formData.subject || "Project Inquiry",
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
-    )}`;
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    window.location.href = mailtoLink;
+    if (!res.ok) throw new Error("Something went wrong");
+
     setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setSubmitted(false);
-    }, 2000);
-  };
+    alert("Message sent successfully! I will get back to you in a few hours.");
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    setTimeout(() => setSubmitted(false), 2000);
+  } catch (err) {
+    console.error(err);
+  }
+};
 
   return (
     <main>

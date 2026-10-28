@@ -10,6 +10,14 @@ export default function Footer() {
         <span className={styles.accent}>build</span>with
         {SITE.name.replace('buildwith', '')}
       </div>
+      <a
+        className={styles.github}
+        href={SITE.github}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub ↗
+      </a>
       <p className={styles.copy}>
         &copy; {currentYear} Nafisa Faruna. All rights reserved.
       </p>

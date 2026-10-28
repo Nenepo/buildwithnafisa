@@ -22,8 +22,8 @@ export default function RealImpact() {
       project: "FashBe",
     },
     {
-      metric: "∞ performance",
-      description: "Refactored component architecture for scalability",
+      metric: "UX + speed",
+      description: "Refactored components and streamlined product flows",
       project: "Fantum",
     },
   ];

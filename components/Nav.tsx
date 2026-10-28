@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE } from "@/lib/data";
 import styles from "./Nav.module.css";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState("");
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const syncHash = () => setActiveHash(window.location.hash);
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, [pathname]);
 
   const navLinks = [
     { label: "About", href: "/about", isExternal: false },
@@ -14,7 +24,15 @@ export default function Nav() {
     { label: "Projects", href: "/#projects", isExternal: true },
     { label: "Experience", href: "/work", isExternal: false },
     { label: "Process", href: "/#process", isExternal: true },
+    { label: "GitHub", href: SITE.github, isExternal: true, newTab: true },
   ];
+
+  const isActive = (href: string) => {
+    if (href.startsWith("https://")) return false;
+    const [path, hash] = href.split("#");
+    if (hash) return pathname === (path || "/") && activeHash === `#${hash}`;
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -29,17 +47,33 @@ export default function Nav() {
         </Link>
 
         <ul className={styles.links}>
-          {navLinks.map((link) =>
-            link.isExternal ? (
+          {navLinks.map((link) => {
+            const active = isActive(link.href);
+            const className = active ? styles.active : undefined;
+            return (
               <li key={link.label}>
-                <a href={link.href}>{link.label}</a>
+                {link.isExternal ? (
+                  <a
+                    href={link.href}
+                    className={className}
+                    aria-current={active ? "page" : undefined}
+                    target={link.newTab ? "_blank" : undefined}
+                    rel={link.newTab ? "noopener noreferrer" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={className}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
-            ) : (
-              <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ),
-          )}
+            );
+          })}
         </ul>
 
         <button
@@ -61,21 +95,35 @@ export default function Nav() {
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
         <ul className={styles.mobileLinks}>
-          {navLinks.map((link) =>
-            link.isExternal ? (
+          {navLinks.map((link) => {
+            const active = isActive(link.href);
+            const className = active ? styles.active : undefined;
+            return (
               <li key={link.label}>
-                <a href={link.href} onClick={handleLinkClick}>
-                  {link.label}
-                </a>
+                {link.isExternal ? (
+                  <a
+                    href={link.href}
+                    className={className}
+                    aria-current={active ? "page" : undefined}
+                    target={link.newTab ? "_blank" : undefined}
+                    rel={link.newTab ? "noopener noreferrer" : undefined}
+                    onClick={handleLinkClick}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={className}
+                    aria-current={active ? "page" : undefined}
+                    onClick={handleLinkClick}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
-            ) : (
-              <li key={link.label}>
-                <Link href={link.href} onClick={handleLinkClick}>
-                  {link.label}
-                </Link>
-              </li>
-            ),
-          )}
+            );
+          })}
           <li className={styles.mobileCta}>
             <Link href="/contact" onClick={handleLinkClick}>
               Send a message

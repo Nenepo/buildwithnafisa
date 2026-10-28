@@ -79,7 +79,7 @@ export default function RootLayout({
     email: "nafisafaruna@gmail.com",
     sameAs: [
       "https://www.linkedin.com/in/nafisa-faruna",
-      "https://github.com/buildwithnafisa",
+      "https://github.com/Nenepo",
     ],
     knowsAbout: [
       "Next.js",

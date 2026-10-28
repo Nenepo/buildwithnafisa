@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
 import Services from "@/components/sections/Services";
+import CaseStudy from "@/components/sections/CaseStudy";
 import Projects from "@/components/sections/Projects";
 import RealImpact from "@/components/sections/RealImpact";
 import Process from "@/components/sections/Process";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <Services />
+      <CaseStudy />
       <Projects />
       <RealImpact />
       <Process />

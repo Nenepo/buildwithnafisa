@@ -24,3 +24,13 @@
   font-size: 0.72rem;
   color: rgba(245, 242, 235, 0.4);
 }
+
+.github {
+  color: var(--cream);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.github:hover {
+  color: var(--accent);
+}

@@ -227,7 +227,7 @@ export const CASE_STUDIES = [
       "I led major improvements across performance management, leave management, review cycles, and general UX polish in a production-facing HR system.",
     challenge:
       "The HRMS product had several complex workflows that needed to be production-ready: performance reviews, KPI staging, leave calendars, role-based permissions, and approval flows. The work required balancing product complexity with clarity, accessibility, and reliability. This system is used every day by employees, managers, and HR teams to manage performance, leave, and approvals, so these flows directly affect operational efficiency and employee experience.",
-    image: "/projects/fantum.png",
+    image: null,
     liveUrl: "",
     metrics: [
       { label: "Role", value: "Frontend Engineer" },
@@ -264,19 +264,60 @@ export const CASE_STUDIES = [
     ],
   },
   {
-    id: "settlement-ui",
-    type: "Banking Operations UI",
-    title: "Settlement UI — NICards Workflow & Report Flows",
+    id: "introspec-reconciliation",
+    type: "Fintech Operations Platform",
+    title: "Introspec Reconciliation — Bank Transaction Dashboard",
     summary:
-      "I contributed to a React-based settlement interface focused on NICards processing, report review, and operational reliability in a business-critical system.",
+      "Frontend work on a bank reconciliation experience, providing transaction visibility across Union Bank and Zenith Bank integrations.",
     challenge:
-      "The settlement platform handled sensitive transaction and reporting flows, and the UI had to stay reliable even as business logic and route conditions changed. A lot of the work centered on stabilizing workflows, route transitions, and reducer-based state behavior. This system is used for banking operations and settlement processing, which makes it highly important because even small UI or state issues can create operational risk, misreporting, or confusion in financial workflows.",
-    image: "/projects/fantum.png",
+      "Bank reconciliation workflows need clear visibility into transaction data across integrations. The interface also needed to support navigation through multiple levels of operational views while staying aligned with backend API contracts.",
+    image: null,
+    liveUrl: "",
+    metrics: [
+      { label: "Role", value: "Frontend Developer" },
+      { label: "Timeline", value: "Apr 2026 – Present" },
+      { label: "Context", value: "ActiveEdge Technologies — Introspec" },
+      { label: "Focus", value: "Bank reconciliation" },
+    ],
+    deliverables: [
+      "Developed the reconciliation dashboard for visibility into transaction and reconciliation data across Union Bank and Zenith Bank integrations",
+      "Implemented breadcrumb navigation and dynamic URL routing to support deep links across multi-level reconciliation views",
+      "Collaborated with backend engineers to align API contracts and data structures for reconciliation workflows",
+    ],
+    solution: [
+      {
+        heading: "Transaction Visibility",
+        body: "Built a dashboard that brings transaction and reconciliation data from bank integrations into a clear operational view.",
+      },
+      {
+        heading: "Deep-Link Navigation",
+        body: "Added breadcrumbs and URL-based routing so users can navigate and return directly to specific levels of reconciliation workflows.",
+      },
+      {
+        heading: "API Alignment",
+        body: "Worked with backend engineers on API contracts and data structures to connect the interface with the reconciliation workflows.",
+      },
+    ],
+    learnings: [
+      "How clear dashboards support transaction reconciliation across multiple bank integrations",
+      "How URL-based navigation improves access to complex operational views",
+      "How close API-contract collaboration helps keep fintech interfaces aligned with backend workflows",
+    ],
+  },
+  {
+    id: "introspec-settlement",
+    type: "Introspec Settlement Platform",
+    title: "Introspec Settlement — NICards Workflow & Report Flows",
+    summary:
+      "I contributed to Introspec's React-based settlement interface, focused on NICards processing, report review, and operational reliability.",
+    challenge:
+      "Introspec's settlement platform handles sensitive transaction and reporting flows, and the interface needs to stay reliable as business logic and route conditions change. Much of the work centered on stabilizing workflows, route transitions, and reducer-based state behavior for banking operations.",
+    image: null,
     liveUrl: "",
     metrics: [
       { label: "Role", value: "Frontend Contributor" },
       { label: "Timeline", value: "Company project" },
-      { label: "Focus", value: "Settlement UI" },
+      { label: "Focus", value: "Introspec settlement workflows" },
       { label: "Importance", value: "High-risk operations" },
     ],
     deliverables: [
@@ -397,6 +438,26 @@ export const PROFESSIONAL_EXPERIENCE = [
       "Collaborate with backend engineers to align API contracts and data structures for fintech workflows",
     ],
     tags: ["React", "Fintech", "Settlement", "API Integration", "Routing"],
+    url: "#",
+  },
+  {
+    id: "introspec-reconciliation",
+    role: "Frontend Developer",
+    company: "ActiveEdge Technologies — Introspec Reconciliation",
+    location: "Lagos, Nigeria",
+    period: "Apr 2026 – Present",
+    highlights: [
+      "Built the reconciliation dashboard for visibility into transaction and reconciliation data across Union Bank and Zenith Bank integrations",
+      "Implemented breadcrumb navigation and dynamic URL routing to support deep links across multi-level reconciliation views",
+      "Collaborate with backend engineers to align API contracts and data structures for bank reconciliation workflows",
+    ],
+    tags: [
+      "React",
+      "Fintech",
+      "Reconciliation",
+      "Bank Integrations",
+      "Routing",
+    ],
     url: "#",
   },
   {

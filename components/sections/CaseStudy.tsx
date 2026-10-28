@@ -54,16 +54,18 @@ export default function CaseStudy() {
             ))}
           </div>
 
-          <div className={styles.visual}>
-            <Image
-              src={activeCase.image}
-              alt={activeCase.title}
-              fill
-              className={styles.projectImage}
-              sizes="(max-width: 768px) 100vw, 70vw"
-              priority
-            />
-          </div>
+          {activeCase.image && (
+            <div className={styles.visual}>
+              <Image
+                src={activeCase.image}
+                alt={activeCase.title}
+                fill
+                className={styles.projectImage}
+                sizes="(max-width: 768px) 100vw, 70vw"
+                priority
+              />
+            </div>
+          )}
 
           <div className={styles.storyBlock}>
             <h4>Background</h4>

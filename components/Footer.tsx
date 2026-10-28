@@ -1,14 +1,14 @@
-import { SITE } from '@/lib/data'
-import styles from './Footer.module.css'
+import { SITE } from "@/lib/data";
+import styles from "./Footer.module.css";
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
         <span className={styles.accent}>build</span>with
-        {SITE.name.replace('buildwith', '')}
+        {SITE.name.replace("buildwith", "")}
       </div>
       <a
         className={styles.github}
@@ -22,5 +22,5 @@ export default function Footer() {
         &copy; {currentYear} Nafisa Faruna. All rights reserved.
       </p>
     </footer>
-  )
+  );
 }

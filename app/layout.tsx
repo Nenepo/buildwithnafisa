@@ -4,7 +4,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "react-hot-toast";
 
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -16,8 +15,8 @@ export const metadata: Metadata = {
   title: "buildwithnafisa — Web Development & Automation",
   description:
     "Full-stack developer specialising in Next.js, React, and intelligent automation. Turning complex requirements into polished, production-ready products.",
-     icons: {
-    icon: '/favicon.svg',
+  icons: {
+    icon: "/favicon.svg",
   },
   keywords: [
     "Next.js",
@@ -101,10 +100,13 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Analytics/>
-        <SpeedInsights/>
-        <Toaster/>
-        <a href="#main" style={{ position: "absolute", left: "-9999px", zIndex: -1 }}>
+        <Analytics />
+        <SpeedInsights />
+        <Toaster />
+        <a
+          href="#main"
+          style={{ position: "absolute", left: "-9999px", zIndex: -1 }}
+        >
           Skip to main content
         </a>
         {children}
